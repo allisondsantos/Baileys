@@ -25,7 +25,6 @@ export interface GroupMetadata {
     // Baileys modified array
     participants: GroupParticipant[]
     ephemeralDuration?: number
-    inviteCode?: string
 }
 
 
