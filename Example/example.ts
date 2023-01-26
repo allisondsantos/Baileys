@@ -42,9 +42,9 @@ const startSock = async () => {
     printQRInTerminal: true,
     auth: state,
     msgRetryCounterMap,
-    sentryDsn:
-      "https://010ebfc959294649a2cbf22904984d60@o4504225576452096.ingest.sentry.io/4504477413212160",
-    // implement to handle retries
+    // sentryDsn:
+    //   "https://010ebfc959294649a2cbf22904984d60@o4504225576452096.ingest.sentry.io/4504477413212160",
+    // // implement to handle retries
     getMessage: async (key) => {
       if (store) {
         const msg = await store.loadMessage(key.remoteJid!, key.id!, undefined);

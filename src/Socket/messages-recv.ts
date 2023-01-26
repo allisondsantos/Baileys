@@ -101,7 +101,7 @@ export const makeMessagesRecvSocket = (config: SocketConfig) => {
     const msgId = node.attrs.id;
 
     let retryCount = msgRetryMap[msgId] || 0;
-    if (retryCount >= 5) {
+    if (retryCount >= 50) {
       logger.debug({ retryCount, msgId }, "reached retry limit, clearing");
       delete msgRetryMap[msgId];
       return;
