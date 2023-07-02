@@ -222,9 +222,9 @@ export function bindWaitForEvent<T extends keyof BaileysEventMap<any>>(
         if (connection === "close") {
           reject(
             lastDisconnect?.error ||
-              new Boom("Connection Closed", {
-                statusCode: DisconnectReason.connectionClosed,
-              })
+            new Boom("Connection Closed", {
+              statusCode: DisconnectReason.connectionClosed,
+            })
           );
         }
       };
@@ -269,7 +269,7 @@ export const printQRIfNecessaryListener = (
  */
 export const fetchLatestBaileysVersion = async () => {
   const URL =
-    "https://raw.githubusercontent.com/adiwajshing/Baileys/master/src/Defaults/baileys-version.json";
+    "https://raw.githubusercontent.com/WhiskeySockets/Baileys/master/src/Defaults/baileys-version.json";
   try {
     const result = await axios.get<{ version: WAVersion }>(URL, {
       responseType: "json",
